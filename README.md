@@ -6,3 +6,5 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 ## Extracting the nucleotide composition for each SNV
 $ samtools faidx Homo_sapiens.GRCh38.dna.primary_assembly. fa -r SNV_list.txt > ch-seq.txt
 
+## Running SSGAN
+To run the SSGAN, there are related input files in the inputs folder which can be used. If you want to use it on a new sample, first apply the somatic variant calling and filtration on the obtained VCF file and then extract the nucleotide composition based on the above-mentioned command and prepare your raw file as the one in the inputs folder. With this approach, you can apply the SSGAN script to your own data.
