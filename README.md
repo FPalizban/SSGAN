@@ -34,9 +34,13 @@ Feel free to explore each section for a detailed understanding of the repository
 
 ## Example Classification
 
-• Upload your chosen VCF dataset into the '/Example Classification/' folder in xlsx format. Additionally, upload the corresponding .txt file, which includes 20 upstream and downstream nucleotides. Utilize the notebook '/Example Classification/Classification.ipynb' for labeling mutations.
+• Upload your chosen VCF dataset into the '/Example Classification/' folder in xlsx format. Additionally, upload the corresponding .txt file, which includes 20 upstream and downstream nucleotides. 
+
+• Utilize the notebook '/Example Classification/Classification.ipynb' for labeling mutations.
 
 ## Generating Somatic Mutations
 
-• Employ the notebook '/Example Generating/Generator.ipynb' for generating somatic mutations. The output of the generator is a CSV file containing information on position, chromosome, alternative, and reference nucleotides.
+• Employ the notebook '/Example Generating/Generator.ipynb' for generating somatic mutations. 
+
+• The output of the generator is a CSV file containing information on position, chromosome, alternative, and reference nucleotides.
 
