@@ -32,7 +32,7 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 •	Generator, discriminator, GAN, and classifier models are saved in .keras format for further validations and usage.
 Feel free to explore each section for a detailed understanding of the repository and its functionalities.
 
-## Example Classification
+## Somatic Mutation Classification
 
 • Upload your chosen VCF dataset into the '/Example Classification/' folder in xlsx format. Additionally, upload the corresponding .txt file, which includes 20 upstream and downstream nucleotides. 
 
