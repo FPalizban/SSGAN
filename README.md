@@ -1,7 +1,7 @@
-# Semi-Supervised GAN (SSGAN) for cfDNA somatic mutation labeling
+# Semi-supervised GAN (SSGAN) for cfDNA somatic mutation labeling
 
 
-## Guide
+## Introduction
 In the current research, we have developed a generative model-based tool for simulating the cfDNA SNVs and labeling each real cfDNA SNV as a tumor or CH. For this aim the real cfDNA NGS data which can be WGS, WES, and targeted sequencing will go under somatic variant calling with any proposed best practices, especially the one that is implemented by GATK and then the raw VCF files will be filtered based on the criteria that are explained in our manuscript. Next, the genomic coordination along with the nucleotide composition information will be extracted and used for training the GAN part of our model.
 For the labeling part of our model, we have collected the validated tumor or CH-related variants from several databases and articles, and the same feature vector was prepared for each of them and fed to our semi-supervised part of our model.
 
@@ -9,7 +9,7 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 
 ## Repository Navigation Guide
 
-### Code
+### Script
 
 •	SSGAN: A repository dedicated to training and validating SSGAN for somatic mutation labeling using both labeled and unlabeled data.
 
@@ -30,7 +30,6 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 •	The generator for the GAN is trained on somatic mutations, enabling the generation of somatic mutations using this engine. This folder includes code and 1000 sample mutations generated.
 ### Model Weights
 •	Generator, discriminator, GAN, and classifier models are saved in .keras format for further validations and usage.
-Feel free to explore each section for a detailed understanding of the repository and its functionalities.
 
 ## Somatic Mutation Classification
 
