@@ -46,8 +46,9 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 
 ## Installation
 
-The SSGAN model is written in python3 and needs the below packages before running:
-numpy
-pandas
-tensorflow
+The SSGAN model is written in python3 and needs the below packages before running:\
+numpy\
+pandas\
+tensorflow\
+
 
