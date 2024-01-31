@@ -53,4 +53,15 @@ tensorflow\
 All the packages can be easily installed via terminal by:\
 $ pip3 install "package name"
 
+## Prepare input data
+
+First, the raw NGS data should go under the somatic variant calling process based on GATK best practices as the workflow attached in .wdl file
+
+The VCF file obtained from cfDNA genomic data needs to be filtered based on the mentioned criteria in our article:
+
+1)	SNV: variants had to meet the criterion of being only SNV for inclusion in the subsequent analysis and indels were not considered in this study.
+2)	Human chromosomes: only variants associated with the 23 pairs of chromosomes and the mitochondrial genome were retained and other scaffolds in the reference genome were ignored.
+3)	High depth: variants were further filtered to ensure they exhibited a high depth, with a depth exceeding 30.
+![image](https://github.com/FPalizban/SSGAN/assets/53061350/9e694d2f-7770-4e4d-9ca1-b367ff33a9a6)
+
 
