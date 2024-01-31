@@ -50,5 +50,7 @@ The SSGAN model is written in python3 and needs the below packages before runnin
 numpy\
 pandas\
 tensorflow\
+All the packages can be easily installed via terminal by:\
+$ pip3 install "package name"
 
 
