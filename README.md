@@ -43,3 +43,11 @@ For the labeling part of our model, we have collected the validated tumor or CH-
 
 • The output of the generator is a CSV file containing information on position, chromosome, alternative, and reference nucleotides.
 
+
+## Installation
+
+The SSGAN model is written in python3 and needs the below packages before running:
+numpy
+pandas
+tensorflow
+
