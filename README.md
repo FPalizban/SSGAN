@@ -64,7 +64,7 @@ First, the raw NGS data should go under the somatic variant calling process base
 The file in Excel is like the unlabeled files in the data folder. Then only the first four columns will be used in the model.\
 Next, to extract the nucleotide composition around the SNV position GRCH38 and samtools are needed.\
 $ sudo apt install samtools\
-Then extract the nucleotide composition around the SNVs by samtools faidx and awk commands.\
+Then extract the nucleotide composition around the SNVs by samtools faidx and awk commands which will be ready as -seg.txt files in the data folder.
 
 
 
