@@ -60,41 +60,11 @@ First, the raw NGS data should go under the somatic variant calling process base
 1)	SNV: variants had to meet the criterion of being only SNV for inclusion in the subsequent analysis and indels were not considered in this study.
 2)	Human chromosomes: only variants associated with the 23 pairs of chromosomes and the mitochondrial genome were retained and other scaffolds in the reference genome were ignored.
 3)	High depth: variants were further filtered to ensure they exhibited a high depth, with a depth exceeding 30.
-![image](https://github.com/FPalizban/SSGAN/assets/53061350/9e694d2f-7770-4e4d-9ca1-b367ff33a9a6)
 
-The file in Excel is like:
-	chr	pos	ref	alt	info	format	info2	
-0	chr1	876887	A	G	DP=1;ECNT=2;MBQ=0	37;MFRL=0	60;MPOS=43;POPAF=7.30;TLOD=3.88	
-1	chr1	876904	C	G	DP=1;ECNT=2;MBQ=0	38;MFRL=0	60;MPOS=60;POPAF=7.30;TLOD=3.98	
-2	chr1	890027	T	C	DP=1;ECNT=2;MBQ=0	15;MFRL=0	60;MPOS=19;POPAF=7.30;TLOD=3.93	
-3	chr1	890030	G	A	DP=1;ECNT=2;MBQ=0	28;MFRL=0	60;MPOS=16;POPAF=7.30;TLOD=3.93	
-4	chr1	1000814	A	G	DP=1;ECNT=2;MBQ=0	38;MFRL=0	60;MPOS=54;POPAF=7.30;TLOD=3.98	
-5	chr1	1000830	C	A	DP=1;ECNT=2;MBQ=0	38;MFRL=0	60;MPOS=38;POPAF=7.30;TLOD=3.98	
-6	chr1	1015382	G	A	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=21;POPAF=7.30;TLOD=3.98	
-7	chr1	1023525	A	G	DP=1;ECNT=2;MBQ=0	38;MFRL=0	60;MPOS=52;POPAF=7.30;TLOD=3.98	
-8	chr1	1023573	A	G	DP=1;ECNT=2;MBQ=0	38;MFRL=0	60;MPOS=24;POPAF=7.30;TLOD=3.98	
-9	chr1	1038819	C	T	DP=1;ECNT=2;MBQ=0	34;MFRL=0	60;MPOS=40;POPAF=7.30;TLOD=3.58	
-10	chr1	1038845	A	G	DP=1;ECNT=2;MBQ=0	33;MFRL=0	60;MPOS=14;POPAF=7.30;TLOD=3.48	
-11	chr1	1039514	C	T	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=10;POPAF=7.30;TLOD=3.98	
-12	chr1	1109147	T	A	DP=1;ECNT=1;MBQ=0	31;MFRL=0	60;MPOS=49;POPAF=7.30;TLOD=3.28	
-13	chr1	1123672	G	T	DP=2;ECNT=1;MBQ=38	38;MFRL=0	60;MPOS=59;POPAF=7.30;TLOD=3.50	
-14	chr1	1195100	G	A	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=27;POPAF=7.30;TLOD=3.98	
-15	chr1	1249852	G	T	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=38;POPAF=7.30;TLOD=3.98	
-16	chr1	1309988	G	A	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=45;POPAF=7.30;TLOD=3.98	
-17	chr1	1385384	G	A	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=42;POPAF=7.30;TLOD=3.98	
-18	chr1	1452816	G	A	DP=1;ECNT=3;MBQ=0	16;MFRL=0	60;MPOS=29;POPAF=7.30;TLOD=4.20	
-19	chr1	1452828	G	A	DP=1;ECNT=3;MBQ=0	15;MFRL=0	60;MPOS=41;POPAF=7.30;TLOD=4.20	
-20	chr1	1487320	C	T	DP=1;ECNT=1;MBQ=0	38;MFRL=0	38;MPOS=32;POPAF=7.30;TLOD=3.98	
-21	chr1	1658866	G	A	DP=3;ECNT=1;MBQ=36	38;MFRL=0	60;MPOS=17;POPAF=7.30;TLOD=3.20	
-22	chr1	1659060	G	A	DP=1;ECNT=1;MBQ=0	37;MFRL=0	60;MPOS=47;POPAF=7.30;TLOD=3.88	
-23	chr1	1720288	G	A	DP=1;ECNT=2;MBQ=0	38;MFRL=0	52;MPOS=47;POPAF=7.30;TLOD=4.20	
-24	chr1	1720309	G	C	DP=1;ECNT=2;MBQ=0	38;MFRL=0	52;MPOS=56;POPAF=7.30;TLOD=4.20	
-25	chr1	1841049	T	G	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=34;POPAF=7.30;TLOD=3.98	
-26	chr1	1841296	T	C	DP=1;ECNT=1;MBQ=0	38;MFRL=0	60;MPOS=32;POPAF=7.30;TLOD=3.98\
-Then only the first four columns will be used in the model.\
+The file in Excel is like the unlabeled files in the data folder. Then only the first four columns will be used in the model.\
 Next, to extract the nucleotide composition around the SNV position GRCH38 and samtools are needed.\
-$ sudo apt install samtools
-$ 
+$ sudo apt install samtools\
+Then extract the nucleotide composition around the SNVs by samtools faidx and awk commands.\
 
 
 
